@@ -1,0 +1,19 @@
+{
+    "name": "ManagersAssembly",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d5ab5145b3a568f4bb1ee71b4b8d8abe",
+        "GUID:f0c6fd79f896271469d5b546cd3d64fa",
+        "GUID:79ad8ce99b0243d498af39093b403aa4",
+        "GUID:1d8b248ae89d9784c84a5af40b3a450e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

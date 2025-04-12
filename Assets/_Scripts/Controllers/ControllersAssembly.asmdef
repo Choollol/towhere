@@ -1,0 +1,18 @@
+{
+    "name": "ControllersAssembly",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d5ab5145b3a568f4bb1ee71b4b8d8abe",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:bafd1a68b55f8a143bd135703d410bdc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
