@@ -63,6 +63,8 @@ public class DoorHandle : InteractableObject
     }
     private IEnumerator WaitToPlayDoorClosedSound()
     {
+        yield return null;
+
         while (doorAnimator.IsCurrentAnimationPlaying()) yield return null;
 
         AudioPlayer.PlaySound(DOOR_CLOSED_SOUND_NAME, position: transform.position);

@@ -27,6 +27,7 @@ public class PlayTimelineEventListener : MonoBehaviour
         timeline.Play();
 
         DataMessenger.SetBool(BoolKey.IsGameActive, false);
+        DataMessenger.SetBool(BoolKey.CanOpenMenu, false);
 
         if (doReturnToGame)
         {
@@ -38,5 +39,6 @@ public class PlayTimelineEventListener : MonoBehaviour
         while (timeline.state == PlayState.Playing) yield return null;
 
         DataMessenger.SetBool(BoolKey.IsGameActive, true);
+        DataMessenger.SetBool(BoolKey.CanOpenMenu, true);
     }
 }

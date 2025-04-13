@@ -36,6 +36,11 @@ public class GameManager : MonoBehaviour
     {
         DataMessenger.SetBool(BoolKey.IsGameActive, false);
         DataMessenger.SetBool(BoolKey.CanOpenMenu, true);
+
+        if (!Application.isEditor)
+        {
+            SceneManager.LoadSceneAsync(SceneUtils.SceneName.Game.ToString(), LoadSceneMode.Additive);
+        }
     }
     private void Update()
     {
@@ -43,7 +48,7 @@ public class GameManager : MonoBehaviour
         {
             EventMessenger.TriggerEvent(EventKey.Continue, true);
         }
-        else if (Input.GetButtonDown("TestScene"))
+        else if (Application.isEditor && Input.GetButtonDown("TestScene"))
         {
             if (DataMessenger.GetBool(BoolKey.IsScreenTransitioning) || !DataMessenger.GetBool(BoolKey.CanOpenMenu))
             {
@@ -71,11 +76,14 @@ public class GameManager : MonoBehaviour
             {
                 EventMessenger.TriggerEvent(EventKey.MenuGoBack);
             }
-            // If no menu is open, open the pause menu
-            /*else if (DataMessenger.GetBool(BoolKey.IsGameActive))
+            else
             {
-                EventMessenger.TriggerEvent(EventKey.OpenPauseMenu);
-            }*/
+                // If no menu is open, open the pause menu
+                if (DataMessenger.GetBool(BoolKey.IsGameActive))
+                {
+                    EventMessenger.TriggerEvent(EventKey.OpenPauseMenu);
+                }
+            }
         }
     }
     private void OpenPauseMenu()
