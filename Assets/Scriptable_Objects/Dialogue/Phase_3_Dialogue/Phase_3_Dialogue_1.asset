@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Phase_3_Dialogue_1
   m_EditorClassIdentifier: 
   dialogue:
-  - dialogueText: "You couldn\u2019t fall asleep, that\u2019s why we\u2019re here. "
+  - dialogueText: "You couldn\u2019t fall asleep, that\u2019s why we\u2019re here."
     eventToTrigger: PlayDeerFootsteps
   - dialogueText: Wait, was that a deer that just ran past?
+    eventToTrigger: EnableDoorHandle
+  - dialogueText: No, it was just your imagination.
     eventToTrigger: 
-  - dialogueText: 'No, it was just your imagination. '
+  - dialogueText: The door, did it always have a handle?
     eventToTrigger: 
-  - dialogueText: 'The door, did it always have a handle? '
+  - dialogueText: Perhaps you should try it.
     eventToTrigger: 

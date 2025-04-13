@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Phase_2_Dialogue_2
   m_EditorClassIdentifier: 
   dialogue:
-  - dialogueText: "It\u2019s peaceful, don\u2019t you think? "
+  - dialogueText: "It\u2019s peaceful, don\u2019t you think?"
     eventToTrigger: 
-  - dialogueText: 'The gentle, midnight air settling on your neck. '
+  - dialogueText: The gentle, midnight air settling on your neck.
     eventToTrigger: 
-  - dialogueText: 'The only sound echoing from yourself.  '
+  - dialogueText: The only sound echoing from yourself.
     eventToTrigger: 

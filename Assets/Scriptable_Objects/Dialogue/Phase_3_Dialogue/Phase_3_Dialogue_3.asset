@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Phase_3_Dialogue_3
   m_EditorClassIdentifier: 
   dialogue:
-  - dialogueText: "We\u2019ve been here for quite some time, haven\u2019t we?  "
+  - dialogueText: "We\u2019ve been here for quite some time, haven\u2019t we?"
     eventToTrigger: 
-  - dialogueText: 'I do hope you are keeping yourself together. '
+  - dialogueText: I do hope you are keeping yourself together.
     eventToTrigger: 
-  - dialogueText: "You can always take a pause, it won\u2019t bother me.  "
+  - dialogueText: "You can always take a pause, it won\u2019t bother me. "
     eventToTrigger: 

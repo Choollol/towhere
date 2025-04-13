@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Phase_4_Dialogue_1
   m_EditorClassIdentifier: 
   dialogue:
-  - dialogueText: 'Try the door again. I have a feeling it will open this time. '
+  - dialogueText: Try the door again. I have a feeling it will open this time.
     eventToTrigger: 

@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour, IInteractable
 {
-    [SerializeField] private bool canInteract = true;
-    public bool CanInteract()
+    [SerializeField] protected bool canInteract = true;
+    public virtual bool CanInteract()
     {
         return canInteract;
     }

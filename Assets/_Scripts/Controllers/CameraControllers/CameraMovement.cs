@@ -1,16 +1,15 @@
+using System.Threading;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CameraMovement : MonoBehaviour
 {
-    private float sensitivity = 700f;
-    private float xRotation = 0f;
+    private float sensitivity = 600f;
+    private float xRotation = 60f;
 
     private Transform playerTransform;
 
-    private Vector2 currentMouseDelta;
     [SerializeField] private bool smoothTurnToggle;
-    private const float smoothTime = 0.1f;
-    private Vector2 smoothInputVelocity = Vector2.zero;
 
     private void Start()
     {
@@ -23,11 +22,11 @@ public class CameraMovement : MonoBehaviour
         {
             if (smoothTurnToggle)
             {
-                BasicLook();
+                SmoothLook();
             }
             else
             {
-                SmoothLook();
+                BasicLook();
             }
         }
     }
@@ -44,14 +43,6 @@ public class CameraMovement : MonoBehaviour
     }
     private void SmoothLook()
     {
-        Vector2 targetMouseDelta = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y")) * sensitivity;
-
-        smoothInputVelocity = Vector2.zero;
-        currentMouseDelta = Vector2.SmoothDamp(currentMouseDelta, targetMouseDelta, ref smoothInputVelocity, smoothTime);
-
-        xRotation = Mathf.Clamp(xRotation - currentMouseDelta.y, -90f, 90f);
-
-        playerTransform.Rotate(Vector3.up * currentMouseDelta.x);
-        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        
     }
 }

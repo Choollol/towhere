@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        DataMessenger.SetBool(BoolKey.IsGameActive, true);
+        DataMessenger.SetBool(BoolKey.IsGameActive, false);
         DataMessenger.SetBool(BoolKey.CanOpenMenu, true);
     }
     private void Update()

@@ -10,7 +10,9 @@ public class DialogueText : MonoBehaviour
     // Seconds to wait after finishing unrolling to prevent accidentally continuing too early
     private const float postUnrollWaitTime = 0.2f;
 
-    private const string slowUnrollChars = ",.";
+    private const string slowUnrollChars = ",.?!";
+
+    private const string DIALOGUE_SOUND_NAME = "Dialogue Sound";
 
     private TextMeshProUGUI text;
     private void Awake()
@@ -52,6 +54,12 @@ public class DialogueText : MonoBehaviour
         {
             char c = dialogueText[index++];
             text.text += c;
+
+            if (!slowUnrollChars.Contains(c))
+            {
+                AudioPlayer.PlaySound(DIALOGUE_SOUND_NAME, doRestartSound: false);
+            }
+
             yield return new WaitForSeconds(1 / (slowUnrollChars.Contains(c) ? slowUnrollSpeed : defaultUnrollSpeed));
         }
 

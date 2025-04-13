@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Phase_4_Dialogue_2
   m_EditorClassIdentifier: 
   dialogue:
-  - dialogueText: 'I had fun during our time together. '
-    eventToTrigger: 
-  - dialogueText: 'I hope we meet again someday, on the other side. '
+  - dialogueText: I had fun during our time together.
+    eventToTrigger: EndGame
+  - dialogueText: I hope we meet again someday, on the other side.
     eventToTrigger: 

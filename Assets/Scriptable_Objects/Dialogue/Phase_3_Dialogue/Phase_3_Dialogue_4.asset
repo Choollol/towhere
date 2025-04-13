@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Phase_3_Dialogue_4
   m_EditorClassIdentifier: 
   dialogue:
-  - dialogueText: 'The morning mist you once knew... '
+  - dialogueText: The morning mist you once knew...
     eventToTrigger: 
-  - dialogueText: 'Can you feel it? '
+  - dialogueText: Can you feel it?
     eventToTrigger: 
-  - dialogueText: "It\u2019s comforting. "
+  - dialogueText: "It\u2019s comforting."
     eventToTrigger: 

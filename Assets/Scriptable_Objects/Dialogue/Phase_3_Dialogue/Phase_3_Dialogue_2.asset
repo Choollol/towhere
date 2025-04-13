@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Phase_3_Dialogue_2
   m_EditorClassIdentifier: 
   dialogue:
-  - dialogueText: "Ah, it\u2019s locked. "
+  - dialogueText: "Ah, it\u2019s locked."
     eventToTrigger: 
-  - dialogueText: "Let\u2019s continue, shall we? "
+  - dialogueText: "Let\u2019s continue, shall we?"
     eventToTrigger: 

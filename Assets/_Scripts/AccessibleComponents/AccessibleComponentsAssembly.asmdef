@@ -2,7 +2,8 @@
     "name": "AccessibleComponentsAssembly",
     "rootNamespace": "",
     "references": [
-        "GUID:d5ab5145b3a568f4bb1ee71b4b8d8abe"
+        "GUID:d5ab5145b3a568f4bb1ee71b4b8d8abe",
+        "GUID:1d8b248ae89d9784c84a5af40b3a450e"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

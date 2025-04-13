@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Phase_3_Dialogue_5
   m_EditorClassIdentifier: 
   dialogue:
-  - dialogueText: 'It seems our time together must come to an end. '
-    eventToTrigger: 
-  - dialogueText: "Let\u2019s go back. "
+  - dialogueText: It seems our time together must come to an end.
+    eventToTrigger: UnlockDoor
+  - dialogueText: "Let\u2019s go back."
     eventToTrigger: NextPhase

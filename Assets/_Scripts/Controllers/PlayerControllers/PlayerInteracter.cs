@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInteracter : MonoBehaviour
 {
-    private const float interactDistance = 3f;
+    private const float interactDistance = 2f;
 
     private const string INTERACT_BUTTON_NAME = "Interact";
 

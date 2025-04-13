@@ -12,6 +12,9 @@ public class PhaseManager : MonoBehaviour
     // How many seconds it takes to drag the player back to the starting position
     private const float playerReturnTimeSeconds = 3;
 
+    // Seconds to wait after dragging player back but before activating transition screen
+    private const float timeBeforeTransitionSeconds = 0.5f;
+
     [SerializeField] private Transform playerTransform;
 
     [SerializeField] private List<GameObject> phaseEnvironmentObjects;
@@ -48,6 +51,8 @@ public class PhaseManager : MonoBehaviour
 
         StartCoroutine(MovePlayerToStart());
 
+        yield return new WaitForSeconds(timeBeforeTransitionSeconds);
+
         AsyncOperation loadTransition =
             SceneManager.LoadSceneAsync(SceneUtils.SceneName.Transition_Scene.ToString(), LoadSceneMode.Additive);
 
@@ -63,6 +68,9 @@ public class PhaseManager : MonoBehaviour
         }
         currentPhase++;
         EnablePhaseEnvironmentObject(currentPhase);
+
+        DataMessenger.SetInt(IntKey.CurrentPhase, currentPhase);
+        EventMessenger.TriggerEvent(EventKey.PhaseProgressed, true);
 
         // Wait one frame so other scripts can detect that screen finished transitioning
         yield return null;

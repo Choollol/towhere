@@ -6,6 +6,8 @@ public class DialogueStarter : MonoBehaviour
 
     [SerializeField] private DialogueData dialogueData;
 
+    [SerializeField] private int maxDialogueTriggerCount = -1;
+
     private void OnEnable()
     {
         EventMessenger.StartListening(startDialogueEventName, StartDialogue);
@@ -17,7 +19,14 @@ public class DialogueStarter : MonoBehaviour
 
     private void StartDialogue()
     {
+        if (maxDialogueTriggerCount == 0)
+        {
+            return;
+        }
+
         DataMessenger.SetScriptableObject(ScriptableObjectKey.DialogueData, dialogueData);
         EventMessenger.TriggerEvent(EventKey.BeginDialogue);
+
+        maxDialogueTriggerCount--;
     }
 }

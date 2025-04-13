@@ -17,5 +17,5 @@ MonoBehaviour:
     eventToTrigger: 
   - dialogueText: "That\u2019s why you decided to come outside for a walk."
     eventToTrigger: 
-  - dialogueText: "At least, that\u2019s what you tell yourself. "
+  - dialogueText: "At least, that\u2019s what you tell yourself."
     eventToTrigger: 

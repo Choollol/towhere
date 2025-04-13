@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Phase_2_Dialogue_3
   m_EditorClassIdentifier: 
   dialogue:
-  - dialogueText: 'Have you ever thought of yourself as lonely? '
+  - dialogueText: Have you ever thought of yourself as lonely?
     eventToTrigger: 
-  - dialogueText: 'No, of course not. '
+  - dialogueText: No, of course not.
     eventToTrigger: 
-  - dialogueText: 'That was a silly question to ask. '
+  - dialogueText: That was a silly question to ask.
     eventToTrigger: 

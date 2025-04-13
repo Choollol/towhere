@@ -135,5 +135,8 @@ public enum EventKey
     DisableInteractIndicator,
     UnlockDoor,
     CloseDoor,
-    DoorIsLocked
+    LockedDoorTried,
+    EnableDoorHandle,
+    ShowContinueHint,
+    PhaseProgressed
 }

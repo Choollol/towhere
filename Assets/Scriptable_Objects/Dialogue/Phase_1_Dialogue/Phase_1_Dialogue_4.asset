@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogue:
   - dialogueText: Not a single star shines in the sky, yet you feel comforted.
     eventToTrigger: 
-  - dialogueText: "Odd. You can\u2019t remember what the stars look like. "
+  - dialogueText: "Odd. You can\u2019t remember what the stars look like."
     eventToTrigger: 
   - dialogueText: "Perhaps that\u2019s why."
     eventToTrigger: 

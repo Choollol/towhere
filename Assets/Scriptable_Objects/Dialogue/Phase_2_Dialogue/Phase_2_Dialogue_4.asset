@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Phase_2_Dialogue_4
   m_EditorClassIdentifier: 
   dialogue:
-  - dialogueText: 'I have. '
+  - dialogueText: I have.
     eventToTrigger: 
-  - dialogueText: "It isn\u2019t always easy, you know, being who I am. "
+  - dialogueText: "It isn\u2019t always easy, you know, being who I am."
     eventToTrigger: 
-  - dialogueText: 'Do you ever get that feeling? '
+  - dialogueText: Do you ever get that feeling?
     eventToTrigger: 

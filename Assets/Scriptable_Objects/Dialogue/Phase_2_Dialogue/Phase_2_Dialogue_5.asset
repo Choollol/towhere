@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Phase_2_Dialogue_5
   m_EditorClassIdentifier: 
   dialogue:
-  - dialogueText: 'Hmm.  '
+  - dialogueText: Hmm.
     eventToTrigger: 
-  - dialogueText: "It seems we can\u2019t go any further. "
+  - dialogueText: "It seems we can\u2019t go any further."
     eventToTrigger: 
-  - dialogueText: "Let\u2019s go back. "
+  - dialogueText: "Let\u2019s go back."
     eventToTrigger: NextPhase
