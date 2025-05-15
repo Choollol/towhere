@@ -14,10 +14,12 @@ public class GameManager : MonoBehaviour
         EventMessenger.StartListening(EventKey.MenuOpened, MenuOpened);
         EventMessenger.StartListening(EventKey.MenuClosed, MenuClosed);
 
-        EventMessenger.StartListening(EventKey.OpenPauseMenu, OpenPauseMenu);
+        //EventMessenger.StartListening(EventKey.OpenPauseMenu, OpenPauseMenu);
 
         EventMessenger.StartListening(EventKey.HideCursor, HideCursor);
         EventMessenger.StartListening(EventKey.ShowCursor, ShowCursor);
+
+        EventMessenger.StartListening(EventKey.ExitGame, ExitGame);
     }
     private void OnDisable()
     {
@@ -27,10 +29,12 @@ public class GameManager : MonoBehaviour
         EventMessenger.StopListening(EventKey.MenuOpened, MenuOpened);
         EventMessenger.StopListening(EventKey.MenuClosed, MenuClosed);
 
-        EventMessenger.StartListening(EventKey.OpenPauseMenu, OpenPauseMenu);
+        //EventMessenger.StartListening(EventKey.OpenPauseMenu, OpenPauseMenu);
 
         EventMessenger.StopListening(EventKey.HideCursor, HideCursor);
         EventMessenger.StopListening(EventKey.ShowCursor, ShowCursor);
+        
+        EventMessenger.StopListening(EventKey.ExitGame, ExitGame);
     }
     private void Start()
     {
@@ -64,7 +68,7 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadSceneAsync(TESTING_SCENE_NAME, LoadSceneMode.Additive);
             }
         }
-        else if (Input.GetButtonDown("Cancel"))
+        else if (Input.GetButtonDown("Cancel") || Input.GetButtonDown("Pause Menu"))
         {
             if (DataMessenger.GetBool(BoolKey.IsScreenTransitioning) || !DataMessenger.GetBool(BoolKey.CanOpenMenu))
             {
@@ -76,14 +80,17 @@ public class GameManager : MonoBehaviour
             {
                 EventMessenger.TriggerEvent(EventKey.MenuGoBack);
             }
-            else
+            else if (DataMessenger.GetBool(BoolKey.IsGameActive))
             {
-                // If no menu is open, open the pause menu
-                if (DataMessenger.GetBool(BoolKey.IsGameActive))
-                {
-                    EventMessenger.TriggerEvent(EventKey.OpenPauseMenu);
-                }
+                OpenPauseMenu();
             }
+        }
+    }
+    private void OnApplicationFocus(bool focus)
+    {
+        if (!focus && DataMessenger.GetBool(BoolKey.IsGameActive))
+        {
+            OpenPauseMenu();
         }
     }
     private void OpenPauseMenu()
@@ -122,5 +129,9 @@ public class GameManager : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+    }
+    private void ExitGame()
+    {
+        Application.Quit();
     }
 }

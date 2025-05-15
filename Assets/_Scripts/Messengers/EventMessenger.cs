@@ -138,5 +138,6 @@ public enum EventKey
     LockedDoorTried,
     EnableDoorHandle,
     ShowContinueHint,
-    PhaseProgressed
+    PhaseProgressed,
+    ExitGame
 }

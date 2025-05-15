@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Transition_Scene.unity
     guid: a1acd159f71440d4ca319bcb77cd8b5f
+  - enabled: 1
+    path: Assets/Scenes/Pause_Menu.unity
+    guid: 8e753cfa208a5184ba05d29d70172a92
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: ce70c6c2679cd3348b272b60a9da5766, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

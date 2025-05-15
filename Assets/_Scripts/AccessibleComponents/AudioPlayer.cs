@@ -127,7 +127,7 @@ public class AudioPlayer : MonoBehaviour
                 GetSounds(transform.GetChild(i));
             }
         }
-        else
+        else if (transform.gameObject.activeSelf)
         {
             sounds.Add(transform.name, transform.GetComponent<AudioSource>());
         }
